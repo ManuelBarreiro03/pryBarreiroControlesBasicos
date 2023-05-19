@@ -44,17 +44,17 @@ namespace pryBarreiroControlesBasicos
             if (chkPicante.Checked == true)
             {
                 lblAdons.Text = Texto;
-                Texto = Texto + "Picante agregado\n";
+                Texto = Texto + "Picante ";
             }
             if (chkMayonesa.Checked == true)
             {
                 lblAdons.Text = Texto;
-                Texto = Texto + "mayonesa agregado\n";
+                Texto = Texto + "mayonesa ";
             }
             if (chkKetchup.Checked == true)
             {
                 lblAdons.Text = Texto;
-                Texto = Texto + "Ketchup agregado\n";
+                Texto = Texto + "Ketchup ";
             }
             lblAdons.Text = Texto;
             cboAdcional.Items.Add(Texto);
