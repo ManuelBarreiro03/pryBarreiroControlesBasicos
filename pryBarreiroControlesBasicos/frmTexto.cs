@@ -15,6 +15,7 @@ namespace pryBarreiroControlesBasicos
         public frmTexto()
         {
             InitializeComponent();
+            
         }
 
         private void txtTexto_TextChanged(object sender, EventArgs e)
@@ -34,30 +35,29 @@ namespace pryBarreiroControlesBasicos
                 lblCopia.ForeColor = Color.Blue;
                 txtTexto.ForeColor = Color.Blue;
             }
-            if (optHeladera.Checked)
-            {
-                lstLugar.Items.Add("Coca");
-                lstLugar.Items.Add("Coca");
-                lstLugar.Items.Add("Coca");
-            }
-            else
-            {
-                if (optFreezer.Checked)
-                {
-                    lstLugar.Items.Add("Hielo");
-                    lstLugar.Items.Add("Hielo");
-                    lstLugar.Items.Add("Hielo");
-                }
-                else 
-                {
-                    lstLugar.Items.Add("Fideos");
-                    lstLugar.Items.Add("Fideos");
-                    lstLugar.Items.Add("Fideos");
-                }
-
-            }
+            
         }
 
-       
+        private void cmdAsignarAdicional_Click(object sender, EventArgs e)
+        {
+            String Texto = "";
+            if (chkPicante.Checked == true)
+            {
+                lblAdons.Text = Texto;
+                Texto = Texto + "Picante agregado\n";
+            }
+            if (chkMayonesa.Checked == true)
+            {
+                lblAdons.Text = Texto;
+                Texto = Texto + "mayonesa agregado\n";
+            }
+            if (chkKetchup.Checked == true)
+            {
+                lblAdons.Text = Texto;
+                Texto = Texto + "Ketchup agregado\n";
+            }
+            lblAdons.Text = Texto;
+            cboAdcional.Items.Add(Texto);
+        }
     }
 }
